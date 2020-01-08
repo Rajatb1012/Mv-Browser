@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topRelLayout" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back_arrow"
+            android:id="@+id/backArrow" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_settings"
+            android:id="@+id/settings"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/middleRelLayout"
+        android:layout_below="@+id/topRelLayout"
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userDetails">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/userProfile"
+                android:src="@mipmap/ic_launcher" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameEdtTxt"
+                android:hint="Name"
+                android:layout_toRightOf="@+id/userProfile"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailEdtTxt"
+                android:hint="Email"
+                android:layout_toRightOf="@+id/userProfile"
+                android:layout_below="@+id/nameEdtTxt"
+                android:layout_marginLeft="10dp" />
+
+        </RelativeLayout>   
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionRelLayout"
+        android:layout_below="@+id/userDetails"
+        android:layout_marginTop="15dp" >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptionEdtTxt"
+            android:lines="4"
+            android:hint="description" />
+
+          </RelativeLayout>
+
+         <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/genderRelLayout"
+        android:layout_below="@+id/descriptionRelLayout"
+        android:layout_marginTop="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender: "
+            android:textSize="16sp"
+            android:id="@+id/genderTxt" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/genderRadioGroup"
+            android:orientation="horizontal"
+            android:layout_below="@+id/genderTxt"
+            android:layout_marginTop="7dp"
+            android:layout_centerHorizontal="true">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/rbMale"
+                android:checked="true"/>
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:id="@+id/rbFemale" />
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:id="@+id/rbOther" />
+
+        </RadioGroup>
+
+         </RelativeLayout>
+
+         <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/countryRelLayout"
+        android:layout_below="@+id/genderRelLayout"
+        android:layout_marginTop="15dp"
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country: "
+            android:id="@+id/countryTxt"
+            android:textSize="16sp" />
+
+        <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countrySpinner"
+        android:layout_below="@+id/countryTxt"
+        android:layout_marginTop="10dp" />
+
+        </RelativeLayout>
